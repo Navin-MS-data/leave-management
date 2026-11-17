@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Secrets and local environment (the .env.example files are the committed templates)
+.env
+.env.*
+!.env.example
+
+# Test and coverage output
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# AI-assistant tooling and local settings (not part of the app)
+.claude/
+.agent/
+.gemini/
+.cursor/
+.impeccable/config.local.json
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+
+# Scratch files
+*.tmp
+*.tmp.*
+*.bak

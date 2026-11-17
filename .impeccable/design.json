@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-17T05:59:46.940Z",
+  "title": "Design System: Passbook",
+  "seededFrom": {
+    "world": "186e96d9ad7e8a5d",
+    "seed": "186e96d9ad7e8a5d",
+    "form": "bank passbook with running balance and pencilled vs posted entries",
+    "surface": ".impeccable/surfaces/frontend-src-app-tsx.md"
+  },
+  "extensions": {
+    "colorMeta": {
+      "green-900": {
+        "role": "primary",
+        "displayName": "Bottle Green",
+        "canonical": "oklch(0.26 0.05 165)",
+        "tonalRamp": [
+          "oklch(0.18 0.053 165)",
+          "oklch(0.3 0.062 165)",
+          "oklch(0.42 0.071 165)",
+          "oklch(0.54 0.079 165)",
+          "oklch(0.66 0.072 165)",
+          "oklch(0.78 0.063 165)",
+          "oklch(0.88 0.056 165)",
+          "oklch(0.95 0.051 165)"
+        ]
+      },
+      "green-700": {
+        "role": "primary",
+        "displayName": "Action Green",
+        "canonical": "oklch(0.38 0.07 165)",
+        "tonalRamp": [
+          "oklch(0.18 0.053 165)",
+          "oklch(0.3 0.062 165)",
+          "oklch(0.42 0.071 165)",
+          "oklch(0.54 0.079 165)",
+          "oklch(0.66 0.072 165)",
+          "oklch(0.78 0.063 165)",
+          "oklch(0.88 0.056 165)",
+          "oklch(0.95 0.051 165)"
+        ]
+      },
+      "stamp": {
+        "role": "secondary",
+        "displayName": "Franking Violet",
+        "canonical": "oklch(0.42 0.17 285)",
+        "tonalRamp": [
+          "oklch(0.18 0.113 285)",
+          "oklch(0.3 0.132 285)",
+          "oklch(0.42 0.150 285)",
+          "oklch(0.54 0.168 285)",
+          "oklch(0.66 0.153 285)",
+          "oklch(0.78 0.135 285)",
+          "oklch(0.88 0.120 285)",
+          "oklch(0.95 0.109 285)"
+        ]
+      },
+      "pencil": {
+        "role": "tertiary",
+        "displayName": "Graphite Pencil",
+        "canonical": "oklch(0.46 0.015 250)",
+        "tonalRamp": [
+          "oklch(0.18 0.013 250)",
+          "oklch(0.3 0.015 250)",
+          "oklch(0.42 0.018 250)",
+          "oklch(0.54 0.020 250)",
+          "oklch(0.66 0.018 250)",
+          "oklch(0.78 0.016 250)",
+          "oklch(0.88 0.014 250)",
+          "oklch(0.95 0.013 250)"
+        ]
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Rejection Red",
+        "canonical": "oklch(0.5 0.18 27)",
+        "tonalRamp": [
+          "oklch(0.18 0.120 27)",
+          "oklch(0.3 0.139 27)",
+          "oklch(0.42 0.159 27)",
+          "oklch(0.54 0.178 27)",
+          "oklch(0.66 0.162 27)",
+          "oklch(0.78 0.143 27)",
+          "oklch(0.88 0.127 27)",
+          "oklch(0.95 0.115 27)"
+        ]
+      },
+      "amber": {
+        "role": "tertiary",
+        "displayName": "Limit Amber",
+        "canonical": "oklch(0.43 0.1 70)",
+        "tonalRamp": [
+          "oklch(0.18 0.080 75)",
+          "oklch(0.3 0.093 75)",
+          "oklch(0.42 0.106 75)",
+          "oklch(0.54 0.119 75)",
+          "oklch(0.66 0.108 75)",
+          "oklch(0.78 0.095 75)",
+          "oklch(0.88 0.084 75)",
+          "oklch(0.95 0.077 75)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Tinted Paper",
+        "canonical": "oklch(0.978 0.01 170)",
+        "tonalRamp": [
+          "oklch(0.18 0.013 170)",
+          "oklch(0.3 0.015 170)",
+          "oklch(0.42 0.018 170)",
+          "oklch(0.54 0.020 170)",
+          "oklch(0.66 0.018 170)",
+          "oklch(0.78 0.016 170)",
+          "oklch(0.88 0.014 170)",
+          "oklch(0.95 0.013 170)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Green-Black Ink",
+        "canonical": "oklch(0.23 0.03 175)",
+        "tonalRamp": [
+          "oklch(0.18 0.020 175)",
+          "oklch(0.3 0.023 175)",
+          "oklch(0.42 0.026 175)",
+          "oklch(0.54 0.030 175)",
+          "oklch(0.66 0.027 175)",
+          "oklch(0.78 0.024 175)",
+          "oklch(0.88 0.021 175)",
+          "oklch(0.95 0.019 175)"
+        ]
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Interface Tint",
+        "canonical": "oklch(0.95 0.025 165)",
+        "tonalRamp": [
+          "oklch(0.18 0.030 165)",
+          "oklch(0.3 0.035 165)",
+          "oklch(0.42 0.040 165)",
+          "oklch(0.54 0.045 165)",
+          "oklch(0.66 0.041 165)",
+          "oklch(0.78 0.036 165)",
+          "oklch(0.88 0.032 165)",
+          "oklch(0.95 0.029 165)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Page Heading",
+        "purpose": "Page h1 and the large preview day count."
+      },
+      "title": {
+        "displayName": "Panel Title",
+        "purpose": "Panel h2, wordmark, remaining-days figure."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All copy and table text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Table heads, field labels, hints, legends, running heads."
+      },
+      "figure": {
+        "displayName": "Ledger Figure",
+        "purpose": "Dates, amounts and balances, tabular mono."
+      },
+      "stamp": {
+        "displayName": "Stamp",
+        "purpose": "Uppercase status marks only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "chart-tooltip",
+        "value": "0 4px 14px oklch(0.2 0.04 165 / 0.14)",
+        "purpose": "Only soft shadow in the system, on the chart tooltip."
+      },
+      {
+        "name": "selected-row-ring",
+        "value": "inset 0 0 0 1px var(--tint-line)",
+        "purpose": "Selected request row in approvals."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Stamp landing and pencil-in wash."
+      },
+      {
+        "name": "stamp-land",
+        "value": "0.55s: scale 1.9 and rotate -8deg settling to scale 1",
+        "purpose": "A stamp coming down when a request is posted or rejected."
+      },
+      {
+        "name": "pencil-in",
+        "value": "1.6s wash from tint to paper",
+        "purpose": "A request just made is drawn in."
+      },
+      {
+        "name": "state-fade",
+        "value": "0.15s on background-color, border-color, color",
+        "purpose": "Buttons and nav links."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition durations collapse to 0.001ms",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "two-column-collapse",
+        "value": "62rem"
+      },
+      {
+        "name": "stacked-rows-and-agenda",
+        "value": "54rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one main action per view.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">New request</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.5rem .95rem;min-height:2.5rem;border:1px solid transparent;border-radius:2px;font:600 .9375rem/1.2 'Public Sans Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .15s,color .15s}.ds-btn:focus-visible{outline:2px solid oklch(0.46 0.08 165);outline-offset:2px}.ds-btn-primary{background:oklch(0.38 0.07 165);color:#fff}.ds-btn-primary:hover{background:oklch(0.32 0.06 165)}"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Low-emphasis action.",
+      "html": "<button class=\"ds-btn ds-btn-quiet\">Cancel</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.5rem .95rem;min-height:2.5rem;border:1px solid transparent;border-radius:2px;font:600 .9375rem/1.2 'Public Sans Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .15s,color .15s}.ds-btn:focus-visible{outline:2px solid oklch(0.46 0.08 165);outline-offset:2px}.ds-btn-quiet{background:transparent;color:oklch(0.4 0.03 175)}.ds-btn-quiet:hover{background:oklch(0.925 0.02 170);color:oklch(0.23 0.03 175)}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Reject or destructive confirmation.",
+      "html": "<button class=\"ds-btn ds-btn-danger\">Reject</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.5rem .95rem;min-height:2.5rem;border:1px solid transparent;border-radius:2px;font:600 .9375rem/1.2 'Public Sans Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .15s,color .15s}.ds-btn:focus-visible{outline:2px solid oklch(0.46 0.08 165);outline-offset:2px}.ds-btn-danger{background:oklch(0.955 0.03 27);color:oklch(0.5 0.18 27);border-color:oklch(0.72 0.12 27)}.ds-btn-danger:hover{background:oklch(0.92 0.05 27)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Labelled single-line input.",
+      "html": "<div class=\"ds-field\"><label for=\"d\">Start date</label><input id=\"d\" class=\"ds-input\" value=\"2026-12-21\"></div>",
+      "css": ".ds-field{display:grid;gap:.25rem}.ds-field label{font:600 .8125rem 'Public Sans Variable',system-ui,sans-serif;color:oklch(0.23 0.03 175)}.ds-input{min-height:2.5rem;padding:.5rem .65rem;background:oklch(0.997 0.003 170);border:1px solid oklch(0.74 0.03 170);border-radius:2px;color:oklch(0.23 0.03 175);font:.9375rem 'Spline Sans Mono Variable',ui-monospace,monospace;font-variant-numeric:tabular-nums}.ds-input:focus-visible{outline:2px solid oklch(0.46 0.08 165);outline-offset:2px}"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Bottle-green rail with active and idle links.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-nav is-active\" href=\"#\">Statement</a><a class=\"ds-nav\" href=\"#\">Calendar</a><a class=\"ds-nav\" href=\"#\">Approvals</a></nav>",
+      "css": ".ds-rail{display:grid;gap:2px;width:14rem;padding:1rem .75rem;background:oklch(0.26 0.05 165)}.ds-nav{padding:.55rem .75rem;border-radius:2px;color:oklch(0.82 0.03 165);text-decoration:none;font:500 .9375rem 'Public Sans Variable',system-ui,sans-serif;transition:background-color .15s,color .15s}.ds-nav:hover{background:oklch(0.32 0.06 165);color:oklch(0.96 0.015 165)}.ds-nav.is-active{background:oklch(0.38 0.07 165);color:#fff;font-weight:600}.ds-nav:focus-visible{outline:2px solid oklch(0.96 0.015 165);outline-offset:2px}"
+    },
+    {
+      "name": "Status Stamps",
+      "kind": "chip",
+      "refersTo": "stamp-approved",
+      "description": "Approved, pending, rejected, cancelled, reversal. Status is always text.",
+      "html": "<span class=\"ds-stamp ds-approved\">Approved</span> <span class=\"ds-stamp ds-pending\">Pending</span> <span class=\"ds-stamp ds-rejected\">Rejected</span> <span class=\"ds-stamp ds-cancelled\">Cancelled</span> <span class=\"ds-stamp ds-reversal\">Reversal</span>",
+      "css": ".ds-stamp{display:inline-block;margin:3px;padding:.05rem .45rem;border:1.5px solid currentColor;outline:1px solid currentColor;outline-offset:2px;border-radius:2px;font:700 .7rem/1.5 'Public Sans Variable',system-ui,sans-serif;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}.ds-approved{color:oklch(0.42 0.17 285);background:oklch(0.94 0.035 285)}.ds-pending{color:oklch(0.46 0.015 250);border-style:dashed;outline-color:transparent;background:repeating-linear-gradient(135deg,transparent 0 3px,oklch(0.46 0.015 250/.2) 3px 4px)}.ds-rejected{color:oklch(0.5 0.18 27);background:oklch(0.955 0.03 27)}.ds-cancelled{color:oklch(0.48 0.03 175);border-style:dotted;outline-color:transparent}.ds-reversal{color:oklch(0.38 0.07 165);background:oklch(0.95 0.025 165);outline-color:transparent}"
+    },
+    {
+      "name": "Account Meter",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "One long bar per account: posted solid, pencilled hatched, remaining open.",
+      "html": "<div class=\"ds-meter\"><span class=\"ds-posted\" style=\"width:40%\"></span><span class=\"ds-pencilled\" style=\"width:15%\"></span></div>",
+      "css": ".ds-meter{display:flex;height:.7rem;background:oklch(0.925 0.02 170);border:1px solid oklch(0.74 0.03 170);border-radius:1px;overflow:hidden;width:20rem}.ds-posted{background:oklch(0.42 0.17 285)}.ds-pencilled{background:repeating-linear-gradient(135deg,oklch(0.925 0.02 170) 0 3px,oklch(0.46 0.015 250) 3px 4px)}"
+    },
+    {
+      "name": "Ledger Rows",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "Posted row in ink, pending row graphite on a hatch, cancelled row struck with its reversal.",
+      "html": "<table class=\"ds-ledger\"><tbody><tr><td class=\"num\">12 Jan to 14 Jan</td><td class=\"num\">3</td><td class=\"num\">17</td></tr><tr class=\"ds-pend\"><td class=\"num\">9 Feb to 10 Feb</td><td class=\"num\">2</td><td class=\"num\">15</td></tr><tr class=\"ds-rev\"><td class=\"num ds-strike\">3 Mar</td><td class=\"num ds-strike\">1</td><td class=\"num\">15</td></tr><tr class=\"ds-rev2\"><td class=\"num\">Reversal</td><td class=\"num\">+1</td><td class=\"num\">16</td></tr></tbody></table>",
+      "css": ".ds-ledger{border-collapse:collapse;width:24rem;font-size:.9375rem;color:oklch(0.23 0.03 175)}.ds-ledger td{padding:.7rem 1rem;border-bottom:1px solid oklch(0.87 0.02 170)}.ds-pend{color:oklch(0.46 0.015 250);background-image:repeating-linear-gradient(135deg,transparent 0 7px,oklch(0.46 0.015 250/.07) 7px 8px)}.ds-rev{color:oklch(0.48 0.03 175)}.ds-rev td{border-bottom:1px dotted oklch(0.74 0.03 170)}.ds-strike{text-decoration:line-through;text-decoration-thickness:1px}.ds-rev2{color:oklch(0.4 0.03 175)}.ds-rev2 td:nth-child(2){color:oklch(0.38 0.07 165);font-weight:700}.num{font-family:'Spline Sans Mono Variable',ui-monospace,monospace;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Note",
+      "kind": "custom",
+      "refersTo": "note-warn",
+      "description": "Error, warn and info strips.",
+      "html": "<div class=\"ds-note ds-warn\">This team is at its limit on 24 Dec.</div>",
+      "css": ".ds-note{padding:.75rem 1rem;border:1px solid oklch(0.74 0.03 170);border-radius:2px;font:.9375rem 'Public Sans Variable',system-ui,sans-serif}.ds-warn{background:oklch(0.95 0.06 85);border-color:oklch(0.78 0.12 80);color:oklch(0.43 0.1 70)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Passbook",
+    "overview": "Leave is a bank passbook, not a form. Days are the currency. A request is first pencilled in (graphite, hatched), becomes ink when a manager posts it (violet franking stamp), and is never erased: a cancelled entry is struck through and followed by a reversal line that returns the days. Every screen is a ledger page: fine 1px rules, dense rows, square 2px corners, running figures in a tabular mono.\n\nThe world is a committed bottle-green shell (rail and top bar) over a pale, green-tinted security-print paper. Colour is spent on meaning, not decoration: violet means posted, graphite hatch means pending, red means rejected or over the limit, amber means at the limit or a holiday.\n\nThe system refuses the grey card dashboard with a hero number and an accent colour. Rows and rules do the structuring; panels are flat and sit side by side, not inside each other.",
+    "keyCharacteristics": [
+      "Bottle-green shell over tinted paper; the ground is never white.",
+      "Violet exists only for posted (approved) entries; all interface tint is green.",
+      "Pending is drawn, not coloured: graphite on a 135-degree hatch.",
+      "Dates, amounts and balances are set in tabular mono; prose in Public Sans.",
+      "Flat, bordered, 2px-cornered, one long bar per account.",
+      "One authored motion moment: the stamp landing. Everything else is a 0.15s colour fade."
+    ],
+    "rules": [
+      {
+        "name": "The Posting Ink Rule",
+        "body": "Violet appears only where a manager has posted an entry. Selection, links, info, focus and hover are green. If a violet element is not an approved entry, it is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pencil Rule",
+        "body": "Pending is graphite plus a 135-degree hatch plus a dashed edge, never a colour alone. A pending thing must look unfinished next to a posted one.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reserved Red Rule",
+        "body": "Red marks rejected or over-limit only. At-the-limit is amber. Never use red for emphasis or destructive-by-default chrome.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Anything that is counted, dated or balanced is mono and tabular. Prose and names are never mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Ledger Rule",
+        "body": "Never add a hard offset shadow, and never stack a card inside a card. Group with a rule or a new panel beside it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use stamp violet only for posted (approved) entries, in stamps, meters, chips and chart bars.",
+      "Do draw pending as graphite on a 135-degree hatch with a dashed edge, and put the status word in the stamp.",
+      "Do set every date, amount and balance in the tabular mono (.num).",
+      "Do keep corners at 2px, borders at 1px hairlines, and structure with rules and rows.",
+      "Do close page headings with the 3px double rule in line-strong.",
+      "Do reverse, never erase: a cancelled entry is struck through and followed by a reversal line returning the days.",
+      "Do pair every status and coverage colour with text, a pattern or a count; give charts an aria-label summary.",
+      "Do show focus with the global 2px green-600 ring, and on-green on the rail and top bar.",
+      "Do honour prefers-reduced-motion: all animation and transition durations collapse to near zero."
+    ],
+    "donts": [
+      "Don't use violet for selection, links, info, hover or focus; those are green.",
+      "Don't use red for anything but rejected or over-limit; at-the-limit is amber.",
+      "Don't add kickers or eyebrows above headings.",
+      "Don't use side-stripe (thick left or right) borders as accents.",
+      "Don't nest cards or panels inside panels.",
+      "Don't use hard offset shadows; the system is flat.",
+      "Don't use glyph or emoji icons; use the authored 24px, 1.6-stroke SVG icon set.",
+      "Don't use pure white as the ground; paper is always tinted.",
+      "Don't make a hero-number grey card dashboard."
+    ]
+  }
+}

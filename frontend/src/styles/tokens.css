@@ -1,0 +1,76 @@
+/*
+  Passbook design tokens.
+  Bottle-green shell, pale tinted-paper ground, violet franking ink for posted entries only,
+  graphite pencil (hatched) for pending, red only for rejected and over-limit.
+*/
+:root {
+  /* Shell */
+  --green-950: oklch(0.2 0.04 165);
+  --green-900: oklch(0.26 0.05 165);
+  --green-800: oklch(0.32 0.06 165);
+  --green-700: oklch(0.38 0.07 165);
+  --green-600: oklch(0.46 0.08 165);
+  --on-green: oklch(0.96 0.015 165);
+  --on-green-2: oklch(0.82 0.03 165);
+
+  /* Ground: tinted paper, never white */
+  --paper: oklch(0.978 0.01 170);
+  --paper-2: oklch(0.955 0.016 170);
+  --paper-3: oklch(0.925 0.02 170);
+  --line: oklch(0.87 0.02 170);
+  --line-strong: oklch(0.74 0.03 170);
+
+  /* Ink */
+  --ink: oklch(0.23 0.03 175);
+  --ink-2: oklch(0.4 0.03 175);
+  --ink-3: oklch(0.48 0.03 175);
+
+  /* Posted (approved): franking-ink violet */
+  --stamp: oklch(0.42 0.17 285);
+  --stamp-bg: oklch(0.94 0.035 285);
+  --stamp-line: oklch(0.7 0.1 285);
+
+  /* Interface tint: selection, info, links. Violet is reserved for posted entries, so none of this is violet. */
+  --tint: oklch(0.95 0.025 165);
+  --tint-line: oklch(0.78 0.045 165);
+  --link: var(--green-700);
+
+  /* Pencilled (pending): graphite */
+  --pencil: oklch(0.46 0.015 250);
+  --pencil-bg: oklch(0.935 0.008 250);
+  --pencil-line: oklch(0.7 0.012 250);
+
+  /* Rejected and over-limit */
+  --red: oklch(0.5 0.18 27);
+  --red-bg: oklch(0.955 0.03 27);
+  --red-line: oklch(0.72 0.12 27);
+
+  /* At the limit, attention but not failure */
+  --amber: oklch(0.43 0.1 70);
+  --amber-bg: oklch(0.95 0.06 85);
+  --amber-line: oklch(0.78 0.12 80);
+
+  /* Type */
+  --font-text: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
+  --font-num: 'Spline Sans Mono Variable', 'Spline Sans Mono', ui-monospace, monospace;
+
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.4rem;
+  --step-3: 1.8rem;
+
+  /* Space (4px base) */
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.5rem;
+  --s6: 2rem;
+  --s7: 3rem;
+
+  --radius: 2px;
+  --radius-lg: 2px;
+  --rail-w: 15rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
