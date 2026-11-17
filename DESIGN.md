@@ -64,7 +64,7 @@ typography:
     fontFeature: "'tnum'"
   stamp:
     fontFamily: "'Public Sans Variable', 'Public Sans', system-ui, sans-serif"
-    fontSize: "0.7rem"
+    fontSize: "0.75rem"
     fontWeight: 700
     lineHeight: 1.5
     letterSpacing: "0.07em"
@@ -230,7 +230,8 @@ A green-and-paper palette with four reserved status inks; every status colour ha
 - **Body** (400, 0.9375rem `--step-0`, 1.5): all copy and table text. `h3` is 650 at the same size.
 - **Label** (650, 0.8125rem `--step--1`): table heads in `ink-2`, field labels in `ink`, hints, legends, running heads.
 - **Figure** (mono, tabular-nums, -0.01em): every date, amount and balance, via the `.num` class. Weight 600 for date ranges, 700 for remaining.
-- **Stamp** (700, 0.7rem, 0.07em, uppercase): status stamps only. Day-strip weekday letters (0.62rem uppercase) are the one other small caps use.
+- **Small** (`--step--2`, 0.75rem): the floor. Stamps, calendar chips and day counts, holiday names, table sub-labels and day-strip weekday letters all use it; nothing in the interface is set smaller than 12px.
+- **Stamp** (700, `--step--2`, 0.07em, uppercase): status stamps only. Day-strip weekday letters are the one other small caps use.
 
 ### Named Rules
 **The Tabular Rule.** Anything that is counted, dated or balanced is mono and tabular. Prose and names are never mono.

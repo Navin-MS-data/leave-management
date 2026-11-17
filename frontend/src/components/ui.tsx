@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import type { RequestStatus } from "../api/types";
 import { Icon, type IconName } from "./Icon";
 
@@ -27,6 +27,11 @@ export function PageHeader({
   running?: ReactNode;
   actions?: ReactNode;
 }) {
+  // The browser tab and screen readers announce where you are, not just the app's name.
+  useEffect(() => {
+    document.title = `${title} · Passbook`;
+  }, [title]);
+
   return (
     <header className="page-header">
       <div>

@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { errorMessage } from '../api/client';
 import { homePath, useAuth } from '../auth/AuthContext';
@@ -18,6 +18,10 @@ export function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    document.title = "Sign in · Passbook";
+  }, []);
 
   if (user) return <Navigate to={homePath(user.role)} replace />;
 

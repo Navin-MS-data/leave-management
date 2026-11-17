@@ -192,8 +192,11 @@ export function NewRequest() {
                 min={ISO.test(values.startDate) ? values.startDate : earliest}
                 {...register("endDate")}
                 aria-invalid={!!errors.endDate}
-                aria-describedby="endDate-err"
+                aria-describedby="endDate-hint endDate-err"
               />
+              <p id="endDate-hint" className="hint">
+                Weekends and public holidays are not counted
+              </p>
               <FieldError id="endDate-err" message={errors.endDate?.message} />
             </div>
           </div>

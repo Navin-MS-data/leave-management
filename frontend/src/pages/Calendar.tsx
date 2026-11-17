@@ -56,7 +56,7 @@ export function Calendar() {
             <Icon name="left" />
           </button>
           <button type="button" className="btn btn--quiet" onClick={() => setCursor(monthOf(today))}>
-            Today
+            This month
           </button>
           <button type="button" className="btn btn--quiet btn--icon" onClick={() => setCursor(shiftMonth(cursor.year, cursor.month, 1))} aria-label="Next month">
             <Icon name="right" />

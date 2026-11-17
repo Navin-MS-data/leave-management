@@ -54,6 +54,7 @@
   --font-text: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
   --font-num: 'Spline Sans Mono Variable', 'Spline Sans Mono', ui-monospace, monospace;
 
+  --step--2: 0.75rem; /* the floor: stamps, chips, counts and sub-labels never go below 12px */
   --step--1: 0.8125rem;
   --step-0: 0.9375rem;
   --step-1: 1.125rem;

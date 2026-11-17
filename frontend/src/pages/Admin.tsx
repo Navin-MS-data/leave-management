@@ -174,8 +174,11 @@ function LeaveTypes() {
       Number(allowance) < 0 ||
       Number(allowance) > 366);
 
+  const [tried, setTried] = useState(false);
+
   function submit(e: FormEvent) {
     e.preventDefault();
+    setTried(true);
     if (!name.trim() || allowanceBad) return;
     create.mutate(
       { name: name.trim(), yearlyAllowance: unlimited ? null : Number(allowance), isPaid: paid },
@@ -185,6 +188,7 @@ function LeaveTypes() {
           setAllowance("");
           setUnlimited(false);
           setPaid(true);
+          setTried(false);
         },
       },
     );
@@ -204,7 +208,7 @@ function LeaveTypes() {
         {types.isError ? <Note tone="error">{errorMessage(types.error)}</Note> : null}
         {types.data ? (
           <div className="table-wrap">
-            <table className="ledger ledger--stack ledger--types">
+            <table className="ledger ledger--stack ledger--center">
               <caption className="visually-hidden">Leave types</caption>
               <thead>
                 <tr>
@@ -229,6 +233,12 @@ function LeaveTypes() {
       <form onSubmit={submit} className="panel stack narrow" noValidate>
         <h2>Add a leave type</h2>
         {create.isError ? <Note tone="error">{errorMessage(create.error)}</Note> : null}
+        {tried && (!name.trim() || allowanceBad) ? (
+          <Note tone="error">
+            Give the leave type a name
+            {unlimited ? "" : " and a yearly allowance of 0 to 366 days (or tick Unlimited)"}.
+          </Note>
+        ) : null}
         <div className="field">
           <label htmlFor="lt-name">Name</label>
           <input
@@ -270,7 +280,7 @@ function LeaveTypes() {
           <button
             type="submit"
             className="btn btn--primary"
-            disabled={create.isPending || !name.trim() || allowanceBad}
+            disabled={create.isPending}
           >
             <Icon name="plus" /> Add leave type
           </button>
@@ -433,12 +443,14 @@ function Holidays() {
     );
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
+  const [tried, setTried] = useState(false);
 
   const add = useMutation({
     mutationFn: () => api.post("/holidays", { date, name: name.trim() }),
     onSuccess: () => {
       setDate("");
       setName("");
+      setTried(false);
       return refresh();
     },
   });
@@ -464,7 +476,7 @@ function Holidays() {
           <Empty title={`No holidays set for ${year}`}>Add one below.</Empty>
         ) : null}
         {holidays.data && holidays.data.length > 0 ? (
-          <table className="ledger">
+          <table className="ledger ledger--center ledger--holidays">
             <caption className="visually-hidden">Public holidays {year}</caption>
             <thead>
               <tr>
@@ -501,6 +513,7 @@ function Holidays() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          setTried(true);
           if (date && name.trim()) add.mutate();
         }}
         className="panel stack narrow"
@@ -508,6 +521,9 @@ function Holidays() {
       >
         <h2>Add a holiday</h2>
         {add.isError ? <Note tone="error">{errorMessage(add.error)}</Note> : null}
+        {tried && (!date || !name.trim()) ? (
+          <Note tone="error">Choose a date and give the holiday a name.</Note>
+        ) : null}
         <div className="field-row">
           <div className="field">
             <label htmlFor="h-date">Date</label>
@@ -527,7 +543,7 @@ function Holidays() {
           <button
             type="submit"
             className="btn btn--primary"
-            disabled={add.isPending || !date || !name.trim()}
+            disabled={add.isPending}
           >
             <Icon name="plus" /> Add holiday
           </button>
@@ -603,7 +619,7 @@ function People() {
         {update.isError ? <Note tone="error">{errorMessage(update.error)}</Note> : null}
         {users.data ? (
           <div className="table-wrap">
-            <table className="ledger ledger--stack">
+            <table className="ledger ledger--stack ledger--center">
               <caption className="visually-hidden">People</caption>
               <thead>
                 <tr>

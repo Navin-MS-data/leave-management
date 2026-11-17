@@ -82,12 +82,17 @@ export function Statement() {
           {balance.data ? <LedgerTable lines={balance.data.balances} /> : null}
         </section>
 
-        {balance.data ? (
-          <section className="panel panel--chart" aria-labelledby="chart-title">
-            <h2 id="chart-title">Days by leave type</h2>
+        {/* Always present, so the page does not jump when the balance arrives */}
+        <section className="panel panel--chart" aria-labelledby="chart-title">
+          <h2 id="chart-title">Days by leave type</h2>
+          {balance.data ? (
             <BalanceChart balances={balance.data.balances} />
-          </section>
-        ) : null}
+          ) : balance.isError ? (
+            <p className="muted small">The chart appears once the balance has loaded.</p>
+          ) : (
+            <div className="chart-box" aria-hidden="true" />
+          )}
+        </section>
       </div>
 
       <section className="panel panel--flush" aria-labelledby="entries-title">

@@ -159,6 +159,7 @@
     align-items: center;
     gap: var(--s2);
     padding: var(--s2) 0;
+    min-height: 2.5rem;
     background: none;
     border: 0;
     color: var(--on-green-2);
@@ -312,6 +313,9 @@ h3 {
         border-color 0.15s,
         color 0.15s;
 }
+.btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
 .btn:disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -410,6 +414,11 @@ textarea {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius);
     color: var(--ink);
+}
+input:hover:not(:disabled):not([aria-invalid="true"]),
+select:hover:not(:disabled):not([aria-invalid="true"]),
+textarea:hover:not(:disabled):not([aria-invalid="true"]) {
+    border-color: var(--ink-3);
 }
 textarea {
     resize: vertical;
@@ -548,7 +557,7 @@ input[type="checkbox"] {
     outline: 1px solid currentColor;
     outline-offset: 2px;
     border-radius: 2px;
-    font-size: 0.7rem;
+    font-size: var(--step--2);
     font-weight: 700;
     letter-spacing: 0.07em;
     text-transform: uppercase;
@@ -644,8 +653,9 @@ input[type="checkbox"] {
 .ledger tbody tr:last-child > * {
     border-bottom: 0;
 }
+/* Colour only: a hover must not wipe the pencil hatch off a pending row */
 .ledger tbody tr:hover {
-    background: var(--paper-2);
+    background-color: var(--paper-2);
 }
 .ledger .r {
     text-align: right;
@@ -734,8 +744,9 @@ input[type="checkbox"] {
 .ledger--entries th:nth-child(6) {
     width: 31%;
 }
-.ledger--types th,
-.ledger--types td {
+/* Single-line admin rows: centre every cell so text, inputs and buttons share one line */
+.ledger--center th,
+.ledger--center td {
     vertical-align: middle;
 }
 .ledger--balance tr.line-row > * {
@@ -831,7 +842,7 @@ input[type="checkbox"] {
 .th-sub {
     display: block;
     font-weight: 400;
-    font-size: 0.72rem;
+    font-size: var(--step--2);
     color: var(--ink-3);
 }
 .confirm {
@@ -997,7 +1008,7 @@ input[type="checkbox"] {
     line-height: 1.15;
 }
 .day-wd {
-    font-size: 0.62rem;
+    font-size: var(--step--2);
     text-transform: uppercase;
     letter-spacing: 0.04em;
 }
@@ -1123,7 +1134,7 @@ input[type="checkbox"] {
     color: #fff;
 }
 .cal-count {
-    font-size: 0.68rem;
+    font-size: var(--step--2);
     font-weight: 700;
     color: var(--ink-2);
 }
@@ -1131,7 +1142,7 @@ input[type="checkbox"] {
     color: var(--red);
 }
 .cal-holiday {
-    font-size: 0.72rem;
+    font-size: var(--step--2);
     color: var(--amber);
     font-weight: 600;
     margin-bottom: var(--s1);
@@ -1147,7 +1158,7 @@ input[type="checkbox"] {
     display: block;
     padding: 0.05rem 0.4rem;
     border-radius: 2px;
-    font-size: 0.74rem;
+    font-size: var(--step--2);
     line-height: 1.5;
     white-space: nowrap;
     overflow: hidden;
@@ -1167,7 +1178,7 @@ input[type="checkbox"] {
     );
 }
 .chip-more {
-    font-size: 0.7rem;
+    font-size: var(--step--2);
     color: var(--ink-2);
 }
 .legend {
@@ -1640,6 +1651,49 @@ input[type="checkbox"] {
     .ledger--stack select {
         width: 100%;
     }
+    /* Touch: small controls grow to a comfortable target once the layout is a phone's */
+    .btn--sm {
+        min-height: 2.5rem;
+        padding-inline: 0.85rem;
+    }
+    .check {
+        min-height: 2.5rem;
+    }
+    .check input[type="checkbox"] {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    /* Holidays: date and name stack on the left, Remove stays at the right edge */
+    .ledger--holidays thead {
+        display: none;
+    }
+    .ledger--holidays,
+    .ledger--holidays tbody {
+        display: block;
+    }
+    .ledger--holidays tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: var(--s3);
+        row-gap: 2px;
+        align-items: center;
+        padding: var(--s3) var(--s4);
+        border-bottom: 1px solid var(--line);
+    }
+    .ledger--holidays tbody tr:last-child {
+        border-bottom: 0;
+    }
+    .ledger--holidays td {
+        display: block;
+        padding: 0;
+        border: 0;
+        text-align: left;
+    }
+    .ledger--holidays td:nth-child(3) {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
     .ledger--stack .status-cell,
     .ledger--stack .row-actions,
     .ledger--stack .inline-edit {
@@ -1674,7 +1728,7 @@ input[type="checkbox"] {
     .cal td {
         position: relative;
         display: grid;
-        grid-template-columns: 2.5rem 5rem minmax(0, 1fr);
+        grid-template-columns: 2.5rem 5.75rem minmax(0, 1fr);
         column-gap: var(--s2);
         align-items: start;
         height: auto;
