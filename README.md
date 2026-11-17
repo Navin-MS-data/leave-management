@@ -114,12 +114,21 @@ Open <http://localhost:5173>.
 
 The password for every account is `Password123!`. The sign-in page has buttons that fill these in.
 
-| Role | Email | Notes |
-|---|---|---|
-| Admin | `admin@example.com` | Alex Admin |
-| Manager | `manager1@example.com` | Maria Manager, manages employees 1 to 4 |
-| Manager | `manager2@example.com` | Marcus Manager, manages employees 5 to 8 |
-| Employee | `employee1@example.com` … `employee8@example.com` | `employee1` is Emma Stone, in Maria's team |
+| Role | Email | Name | Team |
+|---|---|---|---|
+| Admin | `admin@example.com` | Alex Admin | Everyone. Decides managers' requests. |
+| Manager | `manager1@example.com` | Maria Manager | Team A |
+| Manager | `manager2@example.com` | Marcus Manager | Team B |
+| Employee | `employee1@example.com` | Emma Stone | Team A (Maria) |
+| Employee | `employee2@example.com` | Liam Brown | Team A (Maria) |
+| Employee | `employee3@example.com` | Olivia Davis | Team A (Maria) |
+| Employee | `employee4@example.com` | Noah Wilson | Team A (Maria) |
+| Employee | `employee5@example.com` | Ava Martin | Team B (Marcus) |
+| Employee | `employee6@example.com` | Ethan Clark | Team B (Marcus) |
+| Employee | `employee7@example.com` | Mia Lopez | Team B (Marcus) |
+| Employee | `employee8@example.com` | Lucas Kim | Team B (Marcus) |
+
+A manager decides on the employees in their own team, and an admin decides on the managers. To see the approval flow, sign in as `manager1@example.com`. How many requests are waiting depends on when you ran the seed, because its dates are relative to today.
 
 Seeded settings: minimum notice 2 days, at most 2 people off per team per day. Leave types: Annual 20 days, Sick 10 days, Unpaid with no limit. The holidays are fictional.
 

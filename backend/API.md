@@ -326,12 +326,19 @@ Send admins to the inbox or admin page after login, because `/balances/me` and r
 
 Password for every account: `Password123!`
 
-| Role | Email | Notes |
-|---|---|---|
-| admin | `admin@example.com` | |
-| manager | `manager1@example.com` | Team A: employees 1-4 |
-| manager | `manager2@example.com` | Team B: employees 5-8 |
-| employee | `employee1@example.com` ... `employee8@example.com` | |
+| Role | Email | Name | Team |
+|---|---|---|---|
+| admin | `admin@example.com` | Alex Admin | Everyone |
+| manager | `manager1@example.com` | Maria Manager | Team A |
+| manager | `manager2@example.com` | Marcus Manager | Team B |
+| employee | `employee1@example.com` | Emma Stone | Team A |
+| employee | `employee2@example.com` | Liam Brown | Team A |
+| employee | `employee3@example.com` | Olivia Davis | Team A |
+| employee | `employee4@example.com` | Noah Wilson | Team A |
+| employee | `employee5@example.com` | Ava Martin | Team B |
+| employee | `employee6@example.com` | Ethan Clark | Team B |
+| employee | `employee7@example.com` | Mia Lopez | Team B |
+| employee | `employee8@example.com` | Lucas Kim | Team B |
 
 User ids depend on the seed. Today the admin is 1, managers are 2 and 3, and employees are 4-11. **Never hardcode ids**; read them from the API.
 
