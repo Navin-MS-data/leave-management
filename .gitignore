@@ -29,6 +29,8 @@ desktop.ini
 .agent/
 .gemini/
 .cursor/
+PRODUCT.md
+backend/API.md
 .impeccable/config.local.json
 .impeccable/questions/
 .impeccable/mocks/
